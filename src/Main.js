@@ -1,9 +1,17 @@
 import React from "react";
+import HornedBeast from "./HornedBeast";
 
-class Main extends React.Component{
-  render(){
-    return(
-      <h2>main section for things</h2>
+class Main extends React.Component {
+  render() {
+    return (
+      <>
+        <HornedBeast title={'beast one'}
+        imgurl={''}
+        description={'beasty beast'}/>
+        <HornedBeast title={'beast two'}
+        imgurl={''}
+        description={'blah blah'}/>
+      </>
     )
   }
 }
