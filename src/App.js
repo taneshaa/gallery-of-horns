@@ -7,18 +7,21 @@ import data from './data.json'
 import Header from './Header';
 import Footer from './Footer';
 import Main from './Main';
+import { render } from '@testing-library/react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 //import "bootstrap/dist/css/bootstrap.min.css";
 
 
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Main />
-      <Footer />
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <Header />
+        <Main data ={data}/>
+        <Footer />
+      </>
+    );
+  }
 }
-
 export default App;
