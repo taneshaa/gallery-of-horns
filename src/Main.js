@@ -1,16 +1,17 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
+import data from './data.json'
 
 class Main extends React.Component {
   render() {
     return (
       <>
-        <HornedBeast title={'beast one'}
-        imgurl={''}
-        description={'beasty beast'}/>
-        <HornedBeast title={'beast two'}
-        imgurl={''}
-        description={'blah blah'}/>
+      {
+        data.map(beast => (
+          <HornedBeast title={beast.title} imgurl={beast.image_url} description={beast.description}/>
+          
+        ))
+      }
       </>
     )
   }
