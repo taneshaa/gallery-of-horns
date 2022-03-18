@@ -46,7 +46,7 @@ class HornedBeast extends React.Component {
               variant="primary"
               className="glow-on-hover"
               onClick={this.handleFavorites}>
-              {/* This Critter is my favorite */}
+              vote
             </Button>
           </Card.Body>
         </Card>

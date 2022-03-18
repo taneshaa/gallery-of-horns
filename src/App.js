@@ -8,6 +8,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Main from './Main';
 import { render } from '@testing-library/react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 //import "bootstrap/dist/css/bootstrap.min.css";
 
 
