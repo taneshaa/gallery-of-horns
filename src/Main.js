@@ -9,20 +9,21 @@ import "./App.css"
 
 
 class Main extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: this.props.data,
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     data: this.props.data,
+  //   }
+  // }
   render() {
     return (
       <main>
         <Container>
           <Row>
-            {this.state.data.map((beast, index) => (
+            {this.props.data.map((beast, index) => (
               <Col key={index} className="mb-4">
                 <HornedBeast
+                  showModal={this.props.showModal}
                   beast={beast}
                   title={beast.title}
                   name={beast.name}

@@ -16,6 +16,10 @@ class HornedBeast extends React.Component {
     // const newStatus = this.state.status === "Nay" ? "Yay" : "Nay";
     this.setState({ favorite: this.state.favorite + 1 });
     console.log(this.state.favorite);
+    //lifting state by calling a function that is definied in the app.js
+    // we are passing up the beast object that was clicked on in order for the app.js to pass it along to selected beast
+    // selected beast will render the beast that was clicked on
+    this.props.showModal(this.props.beast);
   };
 
   //for lab 3
