@@ -8,7 +8,7 @@ class HornedBeast extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      favorites: 0,
+      favorite: 0,
     }
   }
   //track when a user clicks on an image or one of the beasts
