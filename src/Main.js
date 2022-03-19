@@ -23,6 +23,7 @@ class Main extends React.Component {
             {this.props.data.map((beast, index) => (
               <Col key={index} className="mb-4">
                 <HornedBeast
+                  showModal={this.props.showModal}
                   beast={beast}
                   title={beast.title}
                   image_url={beast.image_url}
