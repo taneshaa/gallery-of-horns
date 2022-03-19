@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import Image from 'react-bootstrap/Image'
 
 class SelectedBeast extends React.Component {
   render() {
@@ -10,7 +11,8 @@ class SelectedBeast extends React.Component {
           {/* do this for everything insdes hornedbeast object (description, image) don't grab favorites */}
             <Modal.Title>{this.props.selectedBeast.title}</Modal.Title>
           </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Image src={this.props.selectedBeast.image_url}/>
+        <Modal.Body>{this.props.selectedBeast.description}</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={this.props.handleClose}>
             Close
