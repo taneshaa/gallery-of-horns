@@ -18,8 +18,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       show: false,
-      selectedBeast: {}
-
+      selectedBeast: {},
+      filteredHorns: data,
     }
   }
   // setting state of show to be false
@@ -47,7 +47,7 @@ class App extends React.Component {
       }
 
     })
-    this.setState({})
+    this.setState({ filteredHorns })
   }
 
 
@@ -57,8 +57,9 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <HornedForm />
-        <Main data={data} showModal={this.showModal} />
+        <HornedForm updateHorn={this.updateHorn} />
+        {/* on page load "data" is going to hold the inital state of filteredHorns which is going to just be the data.json file. One the updateHorn function is fired, "data" will become the filteredHorns(data.json) array */}
+        <Main data={this.state.filteredHorns} showModal={this.showModal} />
         <SelectedBeast show={this.state.show} handleClose={this.handleClose} selectedBeast={this.state.selectedBeast} />
         <Footer />
       </>
