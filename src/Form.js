@@ -8,14 +8,14 @@ class HornedForm extends React.Component {
       <Form>
         <Form.Label>Horn Quantity</Form.Label>
         <Form.Group>
-        <Form.Select aria-label="Default select example">
-          <option>Open this select quantity</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-          <option value="100">One Hundred</option>
-          <option value="All">All</option>
-        </Form.Select>
+          <Form.Select onChange={this.props.updateHorn}>
+            <option>Open this select quantity</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="100">One Hundred</option>
+            <option value="All">All</option>
+          </Form.Select>
         </Form.Group>
       </Form>
     )
